@@ -35,3 +35,12 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+#############
+.DS_Store
+.cache
+.vscode
+web_modules
+node_modules
+dist
+.env
