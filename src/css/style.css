@@ -258,3 +258,23 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+
+.product-list { 
+   display:flex;
+   justify-content:space-between;
+   list-style: none;
+   padding: 0;
+
+}
+
+.product-list li {
+  text-align: center;
+  flex: 4;
+}
+
+.product-list li img {
+  width: 100px;
+  height: auto;
+  
+}
