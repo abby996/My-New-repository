@@ -1,7 +1,4 @@
-// wrapper for querySelector...returns matching element
-export function qs(selector, parent = document) {
-  return parent.querySelector(selector);
-}
+
 // or a more concise version if you are into that sort of thing:
 // export const qs = (selector, parent = document) => parent.querySelector(selector);
 
@@ -50,6 +47,9 @@ async function loadTemplate(path) {
   const res = await fetch(path);
   const template = await res.text();
   return template;
+}// wrapper for querySelector...returns matching element
+export function qs(selector, parent = document) {
+  return parent.querySelector(selector);
 }
 
 // function to dynamically load the header and footer into a page
@@ -153,4 +153,25 @@ export function removeAllAlerts() {
 
   // Loop through the NodeList of alerts and remove each from the DOM
   alerts.forEach(alert => alert.remove());
+}
+
+
+
+
+
+// Function to add item to the list
+function addItem(name, price) {
+  // Create a new list item
+  var newItem = document.createElement('li');
+  newItem.textContent = name + ': $' + price.toFixed(2);
+  
+  // Add the item to the selected items list
+  var selectedItemsList = document.getElementById('selected-items-list');
+  selectedItemsList.appendChild(newItem);
+  
+  // Update total price
+  var totalPriceElement = document.getElementById('total-price');
+  var totalPrice = parseFloat(totalPriceElement.textContent.substr(1)); // Remove '$' and convert to number
+  totalPrice += price;
+  totalPriceElement.textContent = '$' + totalPrice.toFixed(2);
 }
