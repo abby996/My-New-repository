@@ -1,5 +1,6 @@
 import { renderListWithTemplate } from "./utils.mjs";
 
+<<<<<<< HEAD
 function productCardTemplate(product) {
   return `<li class="product-card">
   <a href="/product_pages/index.html?product=${product.Id}">
@@ -69,3 +70,44 @@ export default class ProductList {
 
 
   
+=======
+export default class ProductList {
+  constructor(category, dataSource, listElement, productCardTemplate, filter= true) {
+    this.category = category;
+    this.dataSource = dataSource;
+    this.products = [];
+    this.listElement = listElement;
+    this.productCardTemplate = productCardTemplate;
+    this.filter = filter;
+  }
+
+  filterProducts() {
+    const uniqueProducts = [];
+    const productNamesSet = new Set();
+  
+    this.products.forEach(product => {
+      // Split the product name and take the first part to get the base product name
+      const baseProductName = product.Name.split(' - ')[0];
+      // Check if the base product name is already in our set
+      if (!productNamesSet.has(baseProductName)) {
+        uniqueProducts.push(product);
+        productNamesSet.add(baseProductName);
+      }
+    });
+
+    this.products = uniqueProducts;
+  }
+
+  renderProductList() {
+    renderListWithTemplate(this.productCardTemplate, this.listElement, this.products);
+  }
+
+  async init() {
+    this.products = await this.dataSource.getData(this.category);
+    if (this.filter) {
+      this.filterProducts()
+    }
+    this.renderProductList()
+  }
+}
+>>>>>>> 46e19e530c10488c7398d9467e5d80fe410e9b71

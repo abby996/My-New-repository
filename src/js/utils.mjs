@@ -153,6 +153,7 @@ export function removeAllAlerts() {
 
   // Loop through the NodeList of alerts and remove each from the DOM
   alerts.forEach(alert => alert.remove());
+<<<<<<< HEAD
 }
 
 
@@ -174,4 +175,6 @@ function addItem(name, price) {
   var totalPrice = parseFloat(totalPriceElement.textContent.substr(1)); // Remove '$' and convert to number
   totalPrice += price;
   totalPriceElement.textContent = '$' + totalPrice.toFixed(2);
+=======
+>>>>>>> 46e19e530c10488c7398d9467e5d80fe410e9b71
 }
