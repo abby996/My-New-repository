@@ -1,0 +1,16 @@
+{
+    "personalInformation": {
+      "firstName": "Dan",
+      "lastName": "Abby",
+      "emailOrPhone": "example@gmail.com",
+      "streetAddress": "Delmas",
+      "city": "Port-au-Prince",
+      "state": "West"
+    },
+    "paymentInformation": {
+      "creditCardNumber": "5433456555689273",
+      "expirationDate": "12/23",
+      "securityCode": "123"
+    }
+  }
+  

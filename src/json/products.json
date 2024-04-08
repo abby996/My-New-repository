@@ -1,0 +1,81 @@
+{
+    "products": [
+      {
+        "name": "Wireless Router",
+        "price": 179.94
+      },
+      {
+        "name": "External",
+        "price": 59.96
+      },
+      {
+        "name": "Cable",
+        "price": 55.39
+      },
+      {
+        "name": "External",
+        "price": 59.96
+      },
+      {
+        "name": "USB Key",
+        "price": 78.98
+      },
+      {
+        "name": "Pc Dell",
+        "price": 599.98
+      },
+      {
+        "name": "Pc HP",
+        "price": 549.95
+      },
+      {
+        "name": "Hotspot",
+        "price": 87.97
+      },
+      {
+        "name": "Cable Tester RJ45",
+        "price": 69.98
+      },
+      {
+        "name": "USB Key",
+        "price": 4.99
+      },
+      {
+        "name": "USB KEY",
+        "price": 3.99
+      },
+      {
+        "name": "Pc HP",
+        "price": 549.95
+      },
+      {
+        "name": "Wireless Router",
+        "price": 189.96
+      },
+      {
+        "name": "Computer Case",
+        "price": 369.99
+      },
+      {
+        "name": "Computer Case",
+        "price": 387.98
+      },
+      {
+        "name": "Screen",
+        "price": 69.99
+      },
+      {
+        "name": "Criping Tool",
+        "price": 39.85
+      },
+      {
+        "name": "Cable Tester RJ45",
+        "price": 64.93
+      },
+      {
+        "name": "Cable Tester RJ45",
+        "price": 74.92
+      }
+    ]
+  }
+  

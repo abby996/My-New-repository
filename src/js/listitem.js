@@ -82,5 +82,66 @@ submitButton.addEventListener('click', function(event) {
 
 
 
+// Example POST method implementation:
+async function postData(url = "", data = {}) {
+  try {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "same-origin", // include, *same-origin, omit
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: "follow", // manual, *follow, error
+      referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data), // body data type must match "Content-Type" header
+    });
+    
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    return response.json(); // parses JSON response into native JavaScript objects
+  } catch (error) {
+    console.error('Error:', error);
+    // Handle error here, e.g., display a message to the user
+    alert('An error occurred while processing your request. Please try again later.');
+  }
+}
+
+// Usage example:
+postData("https://innotechplus1@gmail.com/answer", { answer: 42 })
+  .then((data) => {
+    console.log('Success:', data);
+    // Handle success response here
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    // Handle error here
+  });
+
+
+
+  const express = require('express');
+const app = express();
+
+// Enable CORS for all routes
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+// Your other routes and middleware
+// ...
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 
