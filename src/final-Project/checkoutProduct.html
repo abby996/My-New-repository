@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnoTech Plus | Home</title>
+    <title>InnoTech Plus | Personal Information</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <script type="module"  src="../js/main1.js" ></script>
-    <script type="module"  src="../js/listitem.mjs" ></script>
+    <script type="module"  src="../js/listitem.js" ></script>
 </head>
 <body>
+
+<main>
+
     <header class="divider" id= "main-header">
         <h1>InnoTech Plus</h1>
         <nav>
             <ul>
-                <li><a href="#search">Search</a></li>
+                <li><a href="index.html">Back</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </nav>
@@ -51,10 +54,17 @@
         required
       /><br /><br />
 
-
-
-    
-      <legend>Address</legend>
+      <label for="email_or_hone">Email or Number Phone:</label><br />
+      <input
+      type="text"
+      id="email_or_phone"
+      name="email_or_phone"
+      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+      title="Enter a valid email address"
+      placeholder="example@gmail.com"
+      required
+      /><br />
+      
       <label for="street">Street Address:</label><br />
       <input
         type="text"
@@ -82,38 +92,60 @@
         name="state"
         pattern="^[a-zA-Z\s'\-]{3,}$"
         title="Ensure you are not using any special characters, min 3 characters"
-        placeholder="Port-au-Prince"
+        placeholder="west"
         required
       /><br /><br />
 
-
+      <fieldset>
+        <legend>Payment (optional)</legend>
+        <label for="cardNumber">Credit Card Number:</label><br />
+        <input
+          type="text"
+          id="cardNumber"
+          name="cardNumber"
+          pattern="^[0-9]{16}$"
+          title="Only enter numbers, 16 max"
+          placeholder="5433456555689273"
+          required
+        /><br /><br />
+        <label for="expiration">Expiration Date:</label><br />
+        <input
+          id="expiration"
+          name="expiration"
+          pattern="(0[1-9]|1[0-2])\/(\d{2})"
+          placeholder="MM/YY"
+          title="Please enter a valid expiration date (MM/YY)"
+          required
+        /><br /><br />
+        <label for="code">Security Code:</label><br />
+        <input
+          type="text"
+          id="code"
+          name="code"
+          pattern="^[0-9]{3}$"
+          title="Only enter numbers, 3 max"
+          placeholder="123"
+          required
+        /><br /><br />
+      </fieldset>
         
             
-            
-
-
-
-        <fieldset>
+    <fieldset>
           
         
-        <input type="submit" value="Checkout" id="checkoutSubmit" />
-      </form>
-    </section>
-    <section class="summary">
-      <div>
-        <p class="summary-subtotal"></p>
-      </div>
-      <div>
-        <p class="summary-tax"></p>
-      </div>
-      <div>
-        <p class="summary-shipping"></p>
-      </div>
-      <div>
-        <p class="summary-total"></p>
-      </div>
-    </section>
-</section>
-
       
+      <button id="submitButton" type="submit">Submit</button>
+
     </fieldset>
+      </form>
+    
+    </section>
+    
+
+  </main>
+      
+   
+    <footer id="main-footer"></footer>
+ </body>
+
+</html>

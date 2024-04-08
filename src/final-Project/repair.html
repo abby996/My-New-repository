@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnoTech Plus | Home</title>
+    <title>InnoTech Plus | Reparing </title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/navigate.css" />
     <script src="../jS/main1.js" type="module"></script>
-</head>
-<body>
-<header class="divider" id="main-header">
+ </head>
+ <body>
+ <header class="divider" id="main-header">
     <h1>InnoTech Plus </h1>
     <nav>
         <ul>
             <li><a href="index.html">Home Page</a></li>
         </ul>
     </nav>
-</header>
-<main>
+ </header>
+ <main>
+
+     <img src="../images/FGLF1019.JPG" alt="Technician">
+     <p>Technician</p>
+     
     <h2>Report Appliance Problem</h2>
     <form id="reportForm" enctype="multipart/form-data">
         <fieldset>
             <legend>Report Appliance Problem</legend>
-            <label for="problemDescription">Problem Description:</label>
+            <label for="problemDescription"></label>
             <textarea id="problemDescription" name="problemDescription" rows="4" cols="50" placeholder="Enter problem description" required></textarea>
         </fieldset>
         <fieldset>
@@ -29,9 +34,35 @@
             <label for="picture">Picture:</label>
             <input type="file" id="picture" name="picture" accept="image/*">
         </fieldset>
-        <button type="submit">Submit</button>
-    </form>
+        
+
+    </form><label for="name">Name:</label><br />
+    <input
+      type="text"
+      id="Name"
+      name="Name"
+      pattern="^[a-zA-Z\s'\-]{3,}$"
+      title="Ensure you enter a correct name"
+      placeholder="Lena"
+      required
+    /><br /><br />
+
+    <label for="email or N phone">Email or Number Phone:</label><br />
+    <input
+      type="text"
+      id="email or N phone"
+      name=" email or N phone"
+      pattern="^[a-zA-Z\s'\-]{3,}$"
+      title="Ensure you enter your email or number correctly"
+      placeholder=""
+      required
+    /><br />
     
-</main>
-</body>
+   
+    <button type="submit" id="submit">Submit</button>
+
+    
+ </main>
+ <footer id="main-footer"></footer>
+ </body>
 </html>

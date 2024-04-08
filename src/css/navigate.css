@@ -1,0 +1,157 @@
+/* styles.css */
+
+nav ul {
+  
+  color: royalblue;
+}
+ nav li a {color: rgb(0, 53, 139);
+;
+
+}
+
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: #355eab;
+    color: #f8f1f1;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #ecaeae;
+}
+
+.navigation li a:hover {
+    background-color: #86becd;
+    font-weight: 700;
+}
+
+
+/* menu *
+
+
+#menu {
+    background-color: #355eab;
+    color: #f8f1f1;
+    border: none;
+    padding: 10px 20px;
+    position: absolute;
+	
+  }
+  
+  #menu::before {
+    content: "☰";
+  }
+  
+  #menu.open::before {
+    content: "❎";
+  }
+  
+  .navigation {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    background-color: #355eab;
+    color: #f8f1f1;
+  }
+  
+  .navigation li {
+    display: block;
+  }
+  
+  .navigation li a {
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #ecaeae;
+  }
+  
+  .navigation li a:hover {
+    background-color: #86becd;
+    font-weight: 700;
+  }
+
+
+
+/* large view navigation ************************************/
+@media only screen and (min-width: 100rem) {
+    main { display: grid;
+    grid-template-columns: 2fr 1fr;}
+    main h2 {grid-column: 1 / span 2;}
+	
+
+	#menu {
+		display: none; /* hide hamburger button */
+	}
+
+	.navigation {
+		flex-direction: row;
+	}
+
+	.navigation li {
+		display: block;
+		flex: 1 1 100%;
+	}
+	
+	.stuff {
+		margin: 1rem auto;
+	}
+}
+
+
+
+
+
+
+  iframe {
+	width:50%;
+	padding: 1px;
+
+;}
+
+
+/* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+.open li {
+	display: block;
+	width: 100%;
+}
+.open li a {
+	display: block;
+}
+
+.active::before {
+	content: " ";
+}
+
+.stuff {
+	margin: .5m;
+	border: 1px solid rgba(0,0,0,.1);
+	background-color: rgb(159, 188, 246);
+	max-width: 580px;
+	height: 100vh;
+	
+}
+
+
+/* Repair/*/
+
+main img  { width: 100px;
+    height: 100px;
+    margin-left: 90%;
+    border-radius: 50% ;
+
+  }
+  main p {margin-left: 0;
+  }
+  main section p{ margin-right: 5%;
+  color: rgb(43, 62, 62);
+  }

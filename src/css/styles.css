@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+
 :root {
     --font-body: Arial, Helvetica, sans-serif;
     --font-headline: Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -15,8 +19,19 @@
   }
   * {
     box-sizing: border-box;
+  
+  }
+
+  h1 {color:#1a4990;
     
   }
+  h2 {color: #2f67b9;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+    h3{ color: red;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
   body {
     margin: 0;
     font-family: var(--font-body);
@@ -35,16 +50,18 @@
   }
 
 
- /* button {
+  button {
     padding: 0.5em 1em;
-    background-color: var(--secondary-color);
-    color: white;
+    background-color:rgb(202, 94, 94); ;
+    color: rgb(252, 245, 245);
     margin: auto;
-    display: block;
+   
     border: 0;
-    font-size: var(--large-font);
+    
     cursor: pointer;
-  }  */
+  }  
+
+
   .divider {
     border-bottom: 2px solid var(--primary-color);
   }
@@ -84,15 +101,14 @@
   justify-content: center;
   padding: 10px;
 
-  grid-template-columns: repeat(6, 1fr); /* 6 items horizontally */
-  grid-template-rows: repeat(3, auto); /* 3 items vertically */
-  gap: 10px; /* Gap between items */
-  margin: 20px 0; /* Margin for the container */
+  
 }
 
 .product img {
   max-width: 100px; 
   max-height: 100px; 
+  margin-left: 30%;
+  
 }
 
 .product p {
@@ -103,8 +119,18 @@
   margin-top: 10px;
 }
 
+
+
    }
   footer {
     font-size: var(--small-font);
     padding: 1em;
+
+
   }
+
+  
+
+
+
+ 
