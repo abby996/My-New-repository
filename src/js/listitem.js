@@ -1,29 +1,6 @@
 
 
 
-// Navigation menu
-
-const hamButton = document.querySelector('#menu');
-
-const navigation = document.querySelector('.navigation');
-const main = document.querySelector("main1");
-
-hamButton.addEventListener('click', () => {
-	navigation.classList.toggle('open');
-	hamButton.classList.toggle('open');
-
-    
-        if (modeButton.textContent.includes("☰")) {
-            main.style.background = "#000";
-            main.style.color = "#fff";
-            modeButton.textContent = "❎";
-        } else {
-            main.style.background = "#eee";
-            main.style.color = "#000";
-            modeButton.textContent = "☰";
-        }
-    });
-;
 
 
 async function postJSON(data) {
@@ -43,10 +20,10 @@ async function postJSON(data) {
   }
 }
 
-const data = { username: "example" };
+const data = { username: "information.json" };
 postJSON(data);
 
-// script.js
+
 
 // Select the submit button element
 const submitButton = document.getElementById('submitButton');
@@ -64,13 +41,15 @@ submitButton.addEventListener('click', function(event) {
 
     // Regular expressions for email and phone number validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^\d{10}$/; // Assuming a 10-digit phone number format
+    const phoneRegex = /^\d{8}$/; // Assuming a 8-digit phone number format
 
     // Check if the input value matches the email or phone number pattern
     if (emailRegex.test(inputValue) || phoneRegex.test(inputValue)) {
         // If the input is valid, you can submit the form or perform any other action
         alert('Form submitted successfully!');
         // Here, you can submit the form using AJAX or fetch API, or perform any other action
+        window.location.href="success.html"
+
     } else {
         // If the input is invalid, display an error message to the user
         alert('Please enter a valid email address or phone number.');
@@ -143,5 +122,9 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
+ 
+
 
 

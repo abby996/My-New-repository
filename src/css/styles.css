@@ -43,6 +43,9 @@
     width: 1100px;
     height: 400px;
   }
+
+  
+
   header {
     display: flex;
     justify-content: space-between;
@@ -52,16 +55,20 @@
 
   button {
     padding: 0.5em 1em;
-    background-color:rgb(202, 94, 94); ;
+    background-color: rgb(202, 94, 94);
     color: rgb(252, 245, 245);
     margin: auto;
-   
     border: 0;
-    
     cursor: pointer;
-  }  
-
-
+    transition: transform 0.3s ease; 
+  }
+  
+  button:hover {
+    color: rgb(30, 210, 165);
+    background-color: #525b0f;
+  }
+  
+  
   .divider {
     border-bottom: 2px solid var(--primary-color);
   }
