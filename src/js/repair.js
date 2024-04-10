@@ -21,9 +21,10 @@ submitBut.addEventListener('click', function(event) {
     // Check if the input value matches the email or phone number pattern
     if (emailRegex.test(inputValue) || phoneRegex.test(inputValue)) {
         // If the input is valid, you can submit the form or perform any other action
-        alert('Form submitted successfully!');
+        alert(' Thank you for your message! Form submitted successfully, a technician will text you back')
+        
         // Here, you can submit the form using AJAX or fetch API, or perform any other action
-        window.location.href="success.html"
+        window.location.href="index.html"
 
     } else {
         // If the input is invalid, display an error message to the user
