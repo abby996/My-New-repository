@@ -229,10 +229,7 @@ footer p a:hover {
 
 footer .social img  {
   padding-top: 10px;
-  
+  border-radius: 100%;
 
 }
 
-footer img {
-  border-radius: 10%;
-}
