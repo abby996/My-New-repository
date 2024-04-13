@@ -236,3 +236,62 @@ document.addEventListener('click', event => {
 
 
 
+
+
+
+
+
+
+function saveCartToLocalStorage(cartItems, totalPrice) {
+  // Save cart items to local storage as a JSON string
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  
+  // Ensure totalPrice is saved as a string with two decimal places
+  const formattedTotalPrice = totalPrice.toFixed(2) ;
+  localStorage.setItem('totalPrice', formattedTotalPrice);
+
+
+}
+
+
+// Function to load cart items and total price from local storage
+function loadCartFromLocalStorage() {
+  // Retrieve cart items from local storage and parse them as JSON
+  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  // Retrieve total price from local storage and convert it to a number
+  const totalPrice = parseFloat(localStorage.getItem('totalPrice')) || 0;
+
+  // Return the loaded cart items and total price as an object
+  return { cartItems, totalPrice };
+}
+
+// Function to load data from local storage and update UI on page load
+function loadDataFromLocalStorage() {
+  // Load cart items and total price from local storage
+  const { cartItems, totalPrice } = loadCartFromLocalStorage();
+
+  // Update the total price display on the page
+  document.getElementById('totalPrice').textContent = `$${totalPrice.toFixed(2)}`;
+
+  // Iterate through the cart items and update the UI
+  cartItems.forEach(item => {
+    const button = Array.from(document.querySelectorAll('.productButton'))
+                        .find(btn => btn.textContent.trim().includes(item.name));
+    if (button) {
+      // Update the data-quantity attribute of the button
+      button.dataset.quantity = item.quantity;
+    }
+  });
+
+  // Call a function to update the list of selected items in the cart
+  updateSelectedItems();
+}
+
+// Call the loadDataFromLocalStorage function on page load
+document.addEventListener('DOMContentLoaded', function() {
+  loadDataFromLocalStorage();
+});
+
+
+
+
