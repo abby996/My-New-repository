@@ -70,11 +70,7 @@ document.getElementById('checkoutButton').addEventListener('click', function() {
 
 
 
-document.getElementById('submit').addEventListener('click', function() {
-  // Show a confirmation message
-  alert('Thank you for your message! a technician will text you back. ');
-  
-});
+
 
 /*
 document.addEventListener('DOMContentLoaded', function() {
@@ -147,8 +143,8 @@ async function postData(url = "", data = {}) {
   }
 }
 
-// Usage example:
-fetchJSONData("https://example.com/information.json")
+// Usage link innotech:
+fetchJSONData("https://example.com/products.json")
   .then((data) => {
     console.log('Success:', data);
     // Handle success response here
@@ -179,7 +175,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Your other routes and middleware
+
 // ...
 
 // Start the server

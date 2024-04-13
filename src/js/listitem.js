@@ -91,7 +91,7 @@ async function postData(url = "", data = {}) {
   }
 }
 
-// Usage example:
+// 
 postData("https://innotechplus1@gmail.com/answer", { answer: 42 })
   .then((data) => {
     console.log('Success:', data);
@@ -114,7 +114,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Your other routes and middleware
+
 // ...
 
 // Start the server
